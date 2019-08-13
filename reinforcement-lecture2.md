@@ -48,5 +48,12 @@
 - Example: Bernoulli reward: 0 or 1
 - start with uniform distribution $[0, 1]$, same as $Beta(x_a=1, y_a=1)$
 - Update $x_a++$, if reward is 0, $y_a++$ if reward is 1
+- Probability matching: Choose the action randomly where each action has the probability that the action is optimal
+- Thompsan Sampling: Choose a sample from each distribution and pick the action with the heighest value
+  - Achieves optimal bound for multiarmed Bernoulli Bandid problem
+- Problem can also be viewed as sequential Problem, where we update the information status $\tilde{s}$ with each step
+  - $\mathbb{P}(\tilde{s}' | \tilde{s}, a)$
+  - Can be seen as Markov decision problem
+  - in this setting the actions chosen influence the future even in the multiarmed bandit problem
 
-1:11:11
+1:20:00
