@@ -55,5 +55,9 @@
   - $\mathbb{P}(\tilde{s}' | \tilde{s}, a)$
   - Can be seen as Markov decision problem
   - in this setting the actions chosen influence the future even in the multiarmed bandit problem
-
-1:20:00
+- Learn a policy $\pi$, i.e. $\pi(a)=\frac{e^{H_t(a)}}{\sum_b e^{H_t(b)}}$
+- Idea: Update parameters with gradient descent, i.e. $\theta = \theta + \alpha\nabla_\theta\mathbb{E}[R_t|\theta]$
+- $\nabla_\theta\mathbb{E}[R_t|\theta] = \mathbb{E}[R_t\nabla_\theta\log(\pi_\theta(A_t))]$, which can be estimated by MC
+- stochastic gradient descent: $\theta = \theta + \alpha R_t\nabla_\theta\log(\pi_\theta(A_t))$
+- For softmax: $H_{t+1}(a)=H_t(a) + \alpha R_t(\mathcal{I}(A_t=a) - \pi(a))$
+- Can add a baseline without changing anything: $H_{t+1}(a)=H_t(a) + \alpha (R_t - b)(\mathcal{I}(A_t=a) - \pi(a))$, where $b=\frac{1}{t}\sum_t R_t$ is a natural choice
