@@ -42,7 +42,7 @@
 - From this. Choose $U=\sqrt{\frac{-\log(p)}{2N}}$, where $1-p$ is the probability "fairly certain"
 - Choose p to decrease over time, i.e. $1/t$
 - UCB algorithm
-  - $a_t = argmax(Q(a)) + c\sqrt{\frac{\log(t)}{2N(a)}})$, where $c$ is a parameter
+  - $a_t = argmax(Q(a) + c\sqrt{\frac{\log(t)}{2N(a)}})$, where $c$ is a parameter
   - Theorem (Auer et al 2002): UCB with $c=\sqrt{2}$ achieves logarithmic regret
 - Bayesian Bandits: $\mathbb{P}(R_t|\theta, a)$
 - Example: Bernoulli reward: 0 or 1
