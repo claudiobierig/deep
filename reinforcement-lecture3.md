@@ -13,5 +13,8 @@
 - Define state action value $q_\pi(s, a)$ where we also condition the Expectation value on choosing the action $a$
 - $v_{\pi}(s)=\sum_a \pi(a|s)q_\pi(s,a)=\mathbb{E}[q_\pi(S_t,A_t)|S_t=s, \pi]$
 - Bellman Equation in Matrix form. Can rewrite with Matrix, Vector Notation: $v=r+\gamma P^{\pi}v$
+- Can be theoretical solved directly in $\mathcal{O}(|\mathcal{S}|^3)$
+- $v^*(s) = max_\pi v_\pi(s)$ and $q^*(s, a) = max_\pi q_\pi(s, a)$
+- Theorem: For any MDP there exists an optimal policy $\pi^*$ such that $v^*(s) = v_{\pi^*}(s)$
 
-30:00
+41:30
