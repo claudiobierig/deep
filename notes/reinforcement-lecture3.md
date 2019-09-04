@@ -16,5 +16,4 @@
 - Can be theoretical solved directly in $\mathcal{O}(|\mathcal{S}|^3)$
 - $v^*(s) = max_\pi v_\pi(s)$ and $q^*(s, a) = max_\pi q_\pi(s, a)$
 - Theorem: For any MDP there exists an optimal policy $\pi^*$ such that $v^*(s) = v_{\pi^*}(s)$
-
-41:30
+- Read rest in Sutton & Barton
